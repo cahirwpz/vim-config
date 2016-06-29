@@ -20,6 +20,9 @@ set modeline
 set fileencoding=utf-8
 set termencoding=utf-8
 
+" airline configuration (requires powerline font to be installed)
+let g:airline_powerline_fonts = 1
+
 " basic settings
 set background=dark
 set textwidth=80
@@ -41,16 +44,16 @@ map Q gq
 " Configure vim when running in graphics mode
 if has("gui_running")
   set go=afim
-  set guifont=Inconsolata:h14
+  set guifont=Inconsolata\ Medium\ 14
   set columns=120
   set lines=36
   winpos 200 64
 
-  colorscheme wombat
+  colorscheme mrkn256
 
   map <C-Space> <Nul>
 else
-  colorscheme wombat256 
+  colorscheme mrkn256
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -100,6 +103,9 @@ let g:pymode_rope = 0
 
 " tagbar settings
 nnoremap <silent> <F8> :TagbarToggle<CR>
+
+" Tag Highlighting settings
+au BufEnter *.c,*.h silent call TagHighlight#Generation#UpdateAndRead(0)
 
 " java settings
 au BufEnter *.pde setlocal filetype=java
