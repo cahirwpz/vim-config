@@ -105,7 +105,7 @@ let g:pymode_rope = 0
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
 " Tag Highlighting settings
-au BufEnter *.c,*.h silent call TagHighlight#Generation#UpdateAndRead(0)
+au BufEnter *.c,*.h silent call TagHighlight#Generation#UpdateAndRead(1)
 
 " java settings
 au BufEnter *.pde setlocal filetype=java
