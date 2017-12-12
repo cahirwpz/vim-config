@@ -22,3 +22,6 @@
 [submodule "bundle/arm-syntax-vim"]
 	path = bundle/arm-syntax-vim
 	url = https://github.com/ARM9/arm-syntax-vim.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
