@@ -107,6 +107,12 @@ nnoremap <silent> <F8> :TagbarToggle<CR>
 " Tag Highlighting settings
 au BufEnter *.c,*.h silent call TagHighlight#Generation#UpdateAndRead(1)
 
+" assembler settings
+au BufEnter *.[sS] setlocal et sw=8 ts=8
+
+" GIMPLE settings
+au BufRead,BufNewFile *.[0-2][0-9][0-9][ti].* set filetype=gimple
+
 " java settings
 au BufEnter *.pde setlocal filetype=java
 
