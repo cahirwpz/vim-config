@@ -28,3 +28,9 @@
 [submodule "bundle/mips-syntax-vim"]
 	path = bundle/mips-syntax-vim
 	url = https://github.com/ARM9/mips-syntax-vim.git
+[submodule "bundle/dark-terminal2"]
+	path = bundle/rdark-terminal2
+	url = git@github.com:vim-scripts/rdark-terminal2.vim.git
+[submodule "bundle/vim-syntax-extra"]
+	path = bundle/vim-syntax-extra
+	url = git@github.com:justinmk/vim-syntax-extra.git

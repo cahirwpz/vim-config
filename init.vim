@@ -49,11 +49,15 @@ if has("gui_running")
   set lines=36
   winpos 200 64
 
-  colorscheme mrkn256
+  colorscheme rdark-terminal2
 
   map <C-Space> <Nul>
 else
-  colorscheme mrkn256
+  set t_Co=256
+  colorscheme rdark-terminal2
+  " Fixing Vim's Background Color Erase for 256-color tmux and GNU screen
+  " https://sunaku.github.io/vim-256color-bce.html
+  set t_ut=
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -97,6 +101,7 @@ if has("cscope")
 endif
 
 " python-vim settings
+let g:pymode_indent = 0
 let g:pymode_folding = 0
 let g:pymode_lint_ignore = "E111,E121,C901"
 let g:pymode_rope = 0
@@ -105,7 +110,7 @@ let g:pymode_rope = 0
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
 " Tag Highlighting settings
-au BufEnter *.c,*.h silent call TagHighlight#Generation#UpdateAndRead(1)
+au BufEnter *.c,*.h silent call TagHighlight#ReadTypes#ReadTypesByOption()
 
 " assembler settings
 au BufEnter *.[sS] setlocal et sw=8 ts=8
@@ -116,10 +121,14 @@ au BufRead,BufNewFile *.[0-2][0-9][0-9][ti].* set filetype=gimple
 " java settings
 au BufEnter *.pde setlocal filetype=java
 
+" Makefile settings
+au FileType make setlocal ts=8 sw=8 noet
+
 " c & c++ settings
 au FileType c,cpp setlocal foldmethod=syntax foldnestmax=1 cino=(0
 let c_no_comment_fold = 1
 let c_no_if0_fold = 1
+au BufEnter * normal zR
 
 function! GnuIndent()
   setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1 
