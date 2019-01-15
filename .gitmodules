@@ -9,7 +9,7 @@
 	url = https://github.com/vim-airline/vim-airline
 [submodule "bundle/python-mode"]
 	path = bundle/python-mode
-	url = git://github.com/klen/python-mode.git
+	url = https://github.com/klen/python-mode.git
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
@@ -27,10 +27,19 @@
 	url = https://github.com/ARM9/mips-syntax-vim.git
 [submodule "bundle/dark-terminal2"]
 	path = bundle/rdark-terminal2
-	url = git@github.com:vim-scripts/rdark-terminal2.vim.git
+	url = https://github.com/vim-scripts/rdark-terminal2.vim.git
 [submodule "bundle/vim-syntax-extra"]
 	path = bundle/vim-syntax-extra
-	url = git@github.com:justinmk/vim-syntax-extra.git
+	url = https://github.com/justinmk/vim-syntax-extra.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "bundle/nim.vim"]
+ 	path = bundle/nim.vim
+ 	url = https://github.com/zah/nim.vim.git
+[submodule "bundle/zig.vim"]
+ 	path = bundle/zig.vim
+ 	url = https://github.com/zig-lang/zig.vim
+[submodule "bundle/syntastic"]
+ 	path = bundle/syntastic
+ 	url = https://github.com/scrooloose/syntastic.git

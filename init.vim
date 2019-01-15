@@ -44,10 +44,10 @@ map Q gq
 " Configure vim when running in graphics mode
 if has("gui_running")
   set go=afim
-  set guifont=Inconsolata\ Medium\ 14
+  set guifont=Inconsolata\ for\ Powerline:h15
   set columns=120
   set lines=36
-  winpos 200 64
+  winpos 160 64
 
   colorscheme rdark-terminal2
 
@@ -123,6 +123,9 @@ au BufEnter *.pde setlocal filetype=java
 
 " Makefile settings
 au FileType make setlocal ts=8 sw=8 noet
+
+" TypeScript settings
+au FileType typescript setlocal ts=4 sw=4 et
 
 " c & c++ settings
 au FileType c,cpp setlocal foldmethod=syntax foldnestmax=1 cino=(0
