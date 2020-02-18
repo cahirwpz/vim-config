@@ -37,6 +37,7 @@ set showmatch           " highlight matching braces
 
 " language settings
 set spelllang=pl_PL
+set penc=latin2
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -44,7 +45,7 @@ map Q gq
 " Configure vim when running in graphics mode
 if has("gui_running")
   set go=afim
-  set guifont=Inconsolata\ for\ Powerline:h15
+  set guifont=Inconsolata\ for\ Powerline\ Medium\ 16
   set columns=120
   set lines=36
   winpos 160 64
@@ -127,11 +128,14 @@ au FileType make setlocal ts=8 sw=8 noet
 " TypeScript settings
 au FileType typescript setlocal ts=4 sw=4 et
 
+" Unfold everything by default
+au BufEnter * normal zR
+
 " c & c++ settings
 au FileType c,cpp setlocal foldmethod=syntax foldnestmax=1 cino=(0
 let c_no_comment_fold = 1
 let c_no_if0_fold = 1
-au BufEnter * normal zR
+let c_gnu = 1
 
 function! GnuIndent()
   setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1 
