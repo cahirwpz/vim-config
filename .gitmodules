@@ -16,6 +16,9 @@
 [submodule "bundle/TagHighlight"]
 	path = bundle/TagHighlight
 	url = https://github.com/vim-scripts/TagHighlight
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
 [submodule "bundle/arm-syntax-vim"]
 	path = bundle/arm-syntax-vim
 	url = https://github.com/ARM9/arm-syntax-vim.git
