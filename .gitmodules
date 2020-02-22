@@ -49,3 +49,6 @@
 [submodule "bundle/vim-promela-syntax"]
 	path = bundle/vim-promela-syntax
 	url = https://github.com/blyoa/vim-promela-syntax
+[submodule "bundle/vim-glsl"]
+	path = bundle/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl.git
